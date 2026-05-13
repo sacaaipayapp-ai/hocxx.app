@@ -5,7 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 // 🔧 COLE SUAS CHAVES DIRETAMENTE AQUI
 // (substitua os valores abaixo pelos seus do Supabase)
 const SUPABASE_URL = "https://qjddturrvvkfurqmqgyh.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOi..."; // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqZGR0dXJydnZrZnVycW1xZ3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0ODkzMTgsImV4cCI6MjA5NDA2NTMxOH0.4l1Hwq1k1X11WKdeDVrHFppnrBpqfDCusRbBbr3b6-g;
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqZGR0dXJydnZrZnVycW1xZ3loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0ODkzMTgsImV4cCI6MjA5NDA2NTMxOH0.4l1Hwq1k1X11WKdeDVrHFppnrBpqfDCusRbBbr3b6-g;"; // 
 // ─────────────────────────────────────────────
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
