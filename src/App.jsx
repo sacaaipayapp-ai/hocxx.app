@@ -284,14 +284,20 @@ export default function App() {
   // ── Carregar pontos ──
   useEffect(() => {
     (async () => {
-      const { data, error } = await supabase.from("pontos").select("*").order("id");
-      if (error) {
-        console.error(error);
-        setDbOk(false);
-      } else {
+      try {
+        const { data, error } = await supabase
+          .from("pontos")
+          .select("id, nome, tipo, reg, end, preco, dim, ilum, obs, img")
+          .order("id");
+        if (error) throw error;
         setPontos(data || []);
+        setDbOk(true);
+      } catch(e) {
+        console.error("Supabase error:", e);
+        setDbOk(false);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     })();
   }, []);
 
