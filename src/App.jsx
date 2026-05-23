@@ -283,24 +283,23 @@ export default function App() {
 
   // ── Carregar pontos ──
   useEffect(() => {
-    (async () => {
-      try {
-        const { data, error } = await supabase
-          .from("pontos")
-          .select("id, nome, tipo, reg, end, preco, dim, ilum, obs, img")
-          .order("id");
-        if (error) throw error;
-        setPontos(data || []);
-        setDbOk(true);
-      } catch(e) {
-        console.error("Supabase error:", e);
-        setDbOk(false);
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
-
+  (async () => {
+    try {
+      const { data, error } = await supabase
+        .from("pontos")
+        .select("id, nome, tipo, reg, end, preco, dim, ilum, obs")
+        .order("id");
+      if (error) throw error;
+      setPontos(data || []);
+      setDbOk(true);
+    } catch(e) {
+      console.error("Supabase error:", e);
+      setDbOk(false);
+    } finally {
+      setLoading(false);
+    }
+  })();
+}, []);
   const regioes = [...new Set(pontos.map(p => p.reg).filter(Boolean))].sort();
 
   // ── Salvar (criar ou editar) ──
