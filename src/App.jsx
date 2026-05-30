@@ -24,16 +24,15 @@ async function uploadFoto(file) {
   return data.publicUrl;
 }
 
-function Logo({ size = 18 }) {
+function Logo() {
   return (
-    <span style={{ fontSize: size, fontWeight: 700, letterSpacing: "-0.5px", lineHeight: 1 }}>
-      <span style={{ color: "#C1272D" }}>H</span><span style={{ color: "#B8842A" }}>o</span>
-      <span style={{ color: "#B8922A" }}>c</span><span style={{ color: "#1B6CA8" }}>&gt;&gt;</span>
-      <span style={{ color: "#111" }}>&lt;</span>
-    </span>
+    <img
+      src="https://qjddturrvvkfurqmqgyh.supabase.co/storage/v1/object/public/fotos/HOCXX_display.png"
+      alt="Hocxx Smartmidia"
+      style={{ height: 36, objectFit: "contain" }}
+    />
   );
 }
-
 function Badge({ tipo }) {
   const c = BC[tipo] || BC["Frontlight"];
   return <span style={{ fontSize: 10, padding: "2px 8px", borderRadius: 20, fontWeight: 600, background: c.bg, color: c.tx }}>{tipo}</span>;
