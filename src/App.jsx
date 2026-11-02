@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { createClient } from "@supabase/supabase-js";
 
-const SUPABASE_URL = "https://khnnfwpeuaibyyzzxrqn.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtobm5md3BldWFpYnl5enp4cnFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEyMjIwMzksImV4cCI6MjEwNjc5ODAzOX0.-CTjYHG28taQdfb0eQ7hN2rPlWmJHCn-qG1eFhi4t7g";
+const SUPABASE_URL = "https://coflnoviuwdqsxxvghnr.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvZmxub3ZpdXdkcXN4eHZnaG5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM2NDY3NDcsImV4cCI6MjEwOTIyMjc0N30.b0_b_cqyWB1kpa_3TzmU-QT4664q_qlHi_Tn1CFqpIQ";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
